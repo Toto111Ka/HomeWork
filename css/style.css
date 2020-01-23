@@ -77,30 +77,30 @@ header {
 }
 .input {
     margin: 0 auto;
-    height: 400px;
+    height: 450px;
     margin-top: 50px;
     padding: 20px;
-    width: 400px;
+    width: 350px;
     background-color: rgba(0,0,0, .7);
     text-align: center;
     color: #fff;
 }
-.value {
+.valuex {
     margin: 0 auto;
     height: 10px;
-    margin-top: 20px;
+    margin-top: 0px;
     padding: 12px;
-    width: 250.9px;
+    width: 600;
     background-color: rgba(0,0,0, .7);
     text-align: left;
     color: #fff;
-    float:right;
+    float:center;
 }
 .titleI {
     margin-top: 20px;
     font-size: 23px;
     color: #fff;
-    float:left;
+    float:center;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -110,3 +110,7 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance:textfield;
 }
+
+li {
+    list-style-type: none; /* Убираем маркеры */
+   }
