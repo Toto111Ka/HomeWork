@@ -38,52 +38,29 @@ window.addEventListener('DOMContentLoaded', function() {
         v2 = document.getElementById('v2'),
         v3 = document.getElementById('v3'),
         v4 = document.getElementById('v4'),
-        v5 = document.getElementById('v5');    
+        v5 = document.getElementById('v5'),
+        v6 = document.getElementById('v6');    
 
     class Options {
-        constructor(height, width, bg, fontSize, textAlign) {
+        constructor(width, height, bg, fontSize, textAlign, text) {
             this.height = height;
             this.width = width;
             this.bg = bg;
             this.fontSize = fontSize;
             this.textAlign = textAlign;
+            this.text = text;
             }
         div() { 
             let div = document.createElement('div');
             p.appendChild(div);
-            v1.addEventListener('input', function(){
-                div.style.cssText = this.height;
-            });
-            v2.addEventListener('input', function(){
-                div.style.cssText = this.width;
-            });
-            v3.addEventListener('input', function(){
-                div.style.cssText = this.bg;
-            });
-            v4.addEventListener('input', function(){
-                div.style.cssText = this.frontSize;
-            });
-            v5.addEventListener('input', function(){
-                div.style.cssText = this.textAlign;
-            });
+            div.textContent = this.text;
+            let param = `height:${this.height}px; width:${this.width}px; background-color:${this.bg}; text-align:${this.textAlign}; font-size:${this.fontSize}px;`;
+            div.style.cssText = param;
+            
         }
     }
-    var options = new Options();
+    var options = new Options(v1.value, v2.value, v3.value, v4.value, v5.value, v6.value);
     options.div();
 
 });
 
-
-}
-
-createDiv() {
-    let elem = document.createElement('div');
-    document.body.appendChild(elem);
-    let param = `height:${this.height}px; width:${this.width}px; background-color:${this.bg}; font-size:${this.fontSize}px; text-align:${this.textAlign}`;
-    elem.style.cssText = param;
-}
-}
-
-const item = new Options(300, 350, "red", 14, "center");
-
-item.createDiv();
