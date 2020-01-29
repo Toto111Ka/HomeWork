@@ -7,7 +7,8 @@ window.addEventListener('DOMContentLoaded', function() {
     li = document.createElement('li'),
     title = document.getElementById('title'),
     adv = document.querySelector('.adv'),
-    p = document.getElementById('prompt');
+    p = document.getElementById('prompt'),
+    btnAccept = document.getElementsByTagName('button')[0];
 
     menu.insertBefore(menuItem[2], menuItem[1]);
     document.body.style.background = "url('/img/apple_true.jpg')";
@@ -42,7 +43,7 @@ window.addEventListener('DOMContentLoaded', function() {
         v6 = document.getElementById('v6');    
 
     class Options {
-        constructor(width, height, bg, fontSize, textAlign, text) {
+        constructor(width, height, bg, text, fontSize, textAlign) {
             this.height = height;
             this.width = width;
             this.bg = bg;
@@ -54,13 +55,22 @@ window.addEventListener('DOMContentLoaded', function() {
             let div = document.createElement('div');
             p.appendChild(div);
             div.textContent = this.text;
-            let param = `height:${this.height}px; width:${this.width}px; background-color:${this.bg}; text-align:${this.textAlign}; font-size:${this.fontSize}px;`;
+            let param = `
+                height:${this.height}px; 
+                width:${this.width}px; 
+                background-color:${this.bg}; 
+                text-align:${this.textAlign};
+                font-size:${this.fontSize}px;`
+            ;
             div.style.cssText = param;
-            
+
         }
     }
-    var options = new Options(v1.value, v2.value, v3.value, v4.value, v5.value, v6.value);
-    options.div();
-
+    
+    btnAccept.addEventListener('onclick', function() {
+        let options = new Options(v1.value);
+        options.div();
+    });
+    //(width = '200', height = ' ', bg = 'red', text = 'Text', fontSize = '14', color = 'red', textAlign = 'left');
 });
 
