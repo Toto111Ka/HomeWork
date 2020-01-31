@@ -25,7 +25,8 @@ header {
     justify-content: space-around;
     align-items: flex-end;
 }
-.menu-item {
+button {
+    background-color: rgba(76, 175, 79, 0); 
     color: #fff;
     height: 40px;
     line-height: 40px;
