@@ -67,8 +67,8 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    btnAccept.addEventListener('onclick', function() {
-        let options = new Options(v1.value);
+    btnAccept.addEventListener('click', function() {
+        let options = new Options(v1.value, v2.value, v3.value, v4.value, v5.value, v6.value);
         options.div();
     });
     //(width = '200', height = ' ', bg = 'red', text = 'Text', fontSize = '14', color = 'red', textAlign = 'left');
