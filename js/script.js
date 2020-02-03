@@ -59,11 +59,10 @@ window.addEventListener('DOMContentLoaded', function() {
                 height:${this.height}px; 
                 width:${this.width}px; 
                 background-color:${this.bg}; 
-                text-align:${this.textAlign};
-                font-size:${this.fontSize}px;`
+                font-size:${this.fontSize}px;
+                text-align:${this.textAlign};`
             ;
             div.style.cssText = param;
-
         }
     }
     
